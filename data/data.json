@@ -1,0 +1,11 @@
+{
+    "items": [
+        {"type":"tshirt", "gender":"male", "size":"large", 
+            "color":"blue", "image":"img/blue_t.png"},
+        {"type":"tshirt", "gender":"female", "size":"small", 
+            "color":"pink", "image":"img/pink_t.png"},
+        {"type":"pant", "gender":"male", "size":"large", 
+            "color":"blue", "image":"img/blue_p.png"}
+
+    ]
+}
