@@ -32,4 +32,3 @@ loadItems()
 
     })
     .catch(console.log)
-
