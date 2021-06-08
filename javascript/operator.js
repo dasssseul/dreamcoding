@@ -1,3 +1,4 @@
+
 // 1. String concatenation (문자열 연결)
 console.log('my' + 'cat');
 console.log('1' + 2);
@@ -157,3 +158,4 @@ for(let i = 0; i < 11; i++){
     }
     console.log(`q2. ${i}`);
 }
+
