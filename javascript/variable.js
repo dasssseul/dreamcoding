@@ -1,3 +1,4 @@
+
 // 1. Use strict
 // strict 모드로 개발할 경우 
 // 상식적인 범위에서 효율적으로 빠르게 자바스크립트 분석 가능
@@ -91,3 +92,4 @@ text = '7' + 5;
 console.log(`value: ${text}, type: ${typeof text}`);
 text = '8' / '2';
 console.log(`value: ${text}, type: ${typeof text}`);
+
