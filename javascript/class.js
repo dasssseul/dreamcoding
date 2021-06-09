@@ -1,3 +1,4 @@
+
 'use strict';
 // class: template
 // object: instance of a class
@@ -102,3 +103,4 @@ console.log(triangle instanceof Triangle);
 console.log(triangle instanceof Rectangle);
 console.log(rectangle instanceof Shape);
 console.log(rectangle instanceof Object);
+
