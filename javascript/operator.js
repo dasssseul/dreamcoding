@@ -1,16 +1,16 @@
 
 // 1. String concatenation (문자열 연결)
 console.log('my' + 'cat');
-console.log('1' + 2);
+console.log('1' + 2); // 12
 console.log(`string literals: 1 + 2 = ${1 + 2}`);
 
-// 2. Numeric operatior
-console.log(1 + 1);
-console.log(1 - 1);
-console.log(1 / 1);
-console.log(1 * 1);
-console.log(5 % 2);
-console.log(2 ** 3);
+// 2. Numeric operator
+console.log(1 + 1); // 더하기
+console.log(1 - 1); // 빼기
+console.log(1 / 1); // 나누기
+console.log(1 * 1); // 곱하기
+console.log(5 % 2); // 나머지
+console.log(2 ** 3); // 지수
 
 
 // 3. Increment and decrement operators
@@ -28,7 +28,7 @@ console.log(`postIncrement: ${postIncrement}, counter: ${counter}`)
 // 4. Assignment operators
 let x = 3;
 let y = 6;
-x += y;
+x += y; // x = x + y;
 x -= y;
 x *= y;
 x /= y;
@@ -46,10 +46,11 @@ const value1 = true;
 const value2 = 4 < 2;
 
 // || (or), finds the first truthy value
-console.log(`or: ${value1 || value2 || check()}`);
+// 하나라도 앞에서 true가 나오면 그 자리에서 바로 true를 반환하고 멈춤
+console.log(`or: ${value1 || value2 || check()}`); // True
 
 // && (and), finds the first falsy value
-console.log(`and: ${value1 && value2 && check()}`);
+console.log(`and: ${value1 && value2 && check()}`); // False
 
 
 function check(){
@@ -61,7 +62,7 @@ function check(){
 }
 
 // ! (not)
-console.log(!value1);
+console.log(!value1); // False
 
 
 // 7. Equality
@@ -69,19 +70,22 @@ console.log(!value1);
 const stringFive = '5';
 const numberFive = 5;
 
-console.log(stringFive == numberFive);
-console.log(stringFive != numberFive);
+console.log(stringFive == numberFive); // True
+console.log(stringFive != numberFive); // False
 
 // === strict equality, no type coversion
-console.log(stringFive === numberFive);
-console.log(stringFive !== numberFive);
+// 웬만하면 strict equality 사용할 것!
+console.log(stringFive === numberFive); // False
+console.log(stringFive !== numberFive); // True
 
 // object equality by reference
 const ellie1 = {name: 'ellie'};
 const ellie2 = {name: 'ellie'};
 const ellie3 = ellie1;
+// 각각 다른 레퍼런스가 저장되어 있기 때문에
 console.log(ellie1 == ellie2); // False
 console.log(ellie1 === ellie2); // False
+// ellie1을 ellie3에 할당했기때문에
 console.log(ellie1 === ellie3); // True
 
 
@@ -90,8 +94,8 @@ console.log(0 == false); // True
 console.log(0 === false); // False
 console.log('' == false); // True
 console.log('' === false); // False
-console.log(undefined == false); // False
-console.log(undefined === false); // False
+console.log(null == undefined); // True
+console.log(null === undefined); // False
 
 
 // 8. Conditional operators: if
@@ -108,6 +112,7 @@ if(name === 'ellie'){
 
 // 9. Ternary operator: ?
 // condition ? value1 : value2;
+// True면 yes, False면 no 반환
 console.log(name === 'ellie' ? 'yes' : 'no');
 
 
@@ -134,12 +139,15 @@ while (i > 0) {
     i--;
 }
 
+
+// do ~ while : 블럭을 먼저 실행한 다음에 조건 확인
 do {
     console.log(`do while: ${i}`);
     i--;
 }while(i>0);
 
 
+// for loop, for(begin; condition; step)
 for(let i = 3; i > 0; i = i-2){
     console.log(`inline variable for: ${i}`);
 }
