@@ -31,7 +31,7 @@ console.log(ellie.age);
 ellie.speak();
 
 
-// 2. Getter and setters
+// 2. Getter and setter
 // 커피 자판기 예시
 // class - 커피 자판기
 // property - 커피의 수 : 음수는 불가능
@@ -126,7 +126,6 @@ class Triangle extends Shape{
         console.log('*');
     }
 };
-
 const rectangle = new Rectangle(20, 20, 'blue');
 const triangle = new Triangle(20, 20, 'pink');
 rectangle.draw();
