@@ -1,4 +1,8 @@
 
+// [드림코딩 엘리]
+// 자바스크립트 4. 코딩의 기본, operator, if, for loop
+
+
 // 1. String concatenation (문자열 연결)
 console.log('my' + 'cat');
 console.log('1' + 2); // 12

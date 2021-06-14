@@ -1,4 +1,8 @@
 
+// [드림코딩 엘리]
+// 자바스크립트 3. 데이터타입, data types, let va var, hoisting
+
+
 // 1. Use strict
 // strict 모드로 개발할 경우 
 // 상식적인 범위에서 효율적으로 빠르게 자바스크립트 분석 가능
