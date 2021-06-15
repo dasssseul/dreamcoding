@@ -65,7 +65,7 @@ const person4 = new Person('ellie', 30);
 
 console.log(person4);
 
-// 4, Constructor function
+// 4. Constructor function
 function Person(name, age){
     // this = {};
     this.name = name;
