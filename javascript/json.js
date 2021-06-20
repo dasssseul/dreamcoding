@@ -22,7 +22,7 @@
 // 2. 직렬화된 json 데이터를 어떻게 object로 변환할지
 
 // 1. Object to JSON
-// stringfy(obj)
+// stringify(obj)
 let json = JSON.stringify(true);
 console.log(json);
 
@@ -83,5 +83,4 @@ const obj2 = JSON.parse(json, (key, value) => {
 
 console.log(obj2);
 console.log(obj2.birthDate.getDate()); // 18
-
 
