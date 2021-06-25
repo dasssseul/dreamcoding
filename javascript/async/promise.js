@@ -1,4 +1,7 @@
 
+// [드림코딩 엘리]
+// 자바스크립트 12.프로미스 개념부터 활용까지 JavaScript Promise
+
 'use strict';
 
 // Promise is a JavaScript object for asynchronous operation.
