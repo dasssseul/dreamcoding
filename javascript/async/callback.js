@@ -9,9 +9,12 @@
 // hoisting이 된 이후부터 코드가 하나하나씩 동기적으로 실행
 // hoisting: 변수, 함수 선언들이 자동적으로 맨 위에서 실행됨
 
+// 1. synchronous vs asynchronous
+
 console.log('1');
 // 비동기(asynchronous) 예시
-// 콜백 함수는 브라우저에게 1초 뒤에 나의 함수를 불러와줘라고 요청
+// setTimeout() : 일정 시간 후에 특정 코드, 함수를 실행시키고 싶을 때 사용
+// 콜백 함수는 브라우저에게 1초 뒤에 '2'를 불러와줘라고 요청
 setTimeout(()=> console.log('2'), 1000);
 console.log('3');
 
@@ -19,21 +22,16 @@ console.log('3');
 // 1, 3, 2
 
 // 콜백은 비동기적일 때만 쓰는 것은 아니다
-// Synchronous callback
+// Synchronous callback (동기적 콜백)
 function printImmediately(print){
     print();
 };
 printImmediately(() => console.log('hello'));
 
-function printImmediately2(message){
-    console.log(message);
-};
-printImmediately2('hello');
-
 // 실행 결과
 // 1, 3, hello, 2
 
-// Asynchronous callback
+// Asynchronous callback (비동기적 콜백)
 function printWithDelay(print, timeout) {
     setTimeout(print, timeout);
 };
@@ -43,7 +41,13 @@ printWithDelay(() => console.log('async callback'), 2000);
 // 1, 3, hello, 2, async callback
 
 
-// Callback Hell example
+// 콜백 지옥
+// 콜백 함수를 익명 함수로 전달하는 과정이 반복되어 
+// 코드의 들여쓰기 수준이 감당하기 힘들 정도로 깊어지는 현상 
+
+// 2. Callback Hell example (콜백 지옥 예시)
+
+// 클래스 구현
 class userStorage {
     loginUser(id, password, onSuccess, onError){
         setTimeout(() => {
@@ -90,5 +94,6 @@ UserStorage.loginUser(
         )}, 
     (error) => {console.log('error')
 });
+
 
 
