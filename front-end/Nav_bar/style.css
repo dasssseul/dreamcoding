@@ -1,0 +1,122 @@
+:root{
+    --text-color: white;
+    --background-color: #263343;
+    --accent-color: pink;
+}
+
+/* 스타일링은 최상의 박스부터 시작 */
+body{
+    margin: 0;
+    /* 폰트 적용 */
+    font-family: 'Roboto Slab';
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar{
+    /* 아이템들을 한 줄에 나란히 */
+    display:flex;
+    /* 수평, 아이템들 사이에 스페이스바 */
+    justify-content: space-between;
+    /* 수직 방향의 중간에 위치하도록 */
+    align-items: center;
+    background-color: var(--background-color);
+    /* 위아래 8px, 양옆 12px */
+    padding: 8px 12px;
+}
+
+.navbar_logo{
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.navbar_logo i {
+    color: var(--accent-color);
+}
+
+.navbar_menu {
+    display: flex;
+    /* li의 점 없애기 */
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li{
+    padding: 8px 12px;
+}
+
+/* 토글 버튼의 경우 flex 박스가 아니라 */
+/* 문서 흐름에서 나와 맨 오른쪽 위에 위치해야하므로 */
+.navbar_toggleBtn{
+    position: absolute;
+    /* 오른쪽에서 32px 떨어진 곳에 붙여줘 */
+    right: 32px;
+    font-size: 24px;
+    color: var(--accent-color);
+    /* 화면이 작아졌을 때만 나오도록 */
+    display: none;
+}
+
+/* 메뉴에 마우스를 올려놨을 때 */
+.navbar_menu li:hover {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+.navbar_icons {
+    display: flex;
+    list-style: none;
+    color: var(--text-color);
+    padding-left: 0;
+}
+
+.navbar_icons li{
+    padding: 8px 12px;
+}
+
+@media screen and (max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        /* 수평에서 왼쪽으로 배치 */
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar_menu{
+        /* 메뉴의 방향은 column(수직) */
+        flex-direction: column;
+        /* 메뉴는 가운데에 위치 */
+        align-items: center;
+        /* 메뉴를 화면에 꽉차도록 */
+        width: 100%;
+        /* 토글 버튼 클릭 시 나오도록 */
+        display: none;
+    }
+
+    /* 마우스를 올려놨을 때 강조도 전체적으로 되어야하므로 */
+    .navbar_menu li{
+        width: 100%;
+        /* 메뉴 글자도 가운데에 위치하도록 조정 */
+        text-align: center;
+    }
+
+    .navbar_icons {
+        /* icons의 방향이 row(수평)이기 때문에 */
+        justify-content: center;
+        width : 100%;
+        /* 토글 버튼 클릭 시 나오도록 */
+        display: none;
+    }
+
+    .navbar_toggleBtn{
+        /* 화면이 작아졌을 때만 나오게 하기 */
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active{
+        display: flex;
+    }
+}
