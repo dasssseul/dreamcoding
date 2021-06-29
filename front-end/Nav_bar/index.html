@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 스타일 css 적용 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- google font 폰트 적용 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Nav bar</title>
+    <!-- font awesome 로고, 아이콘 적용 -->
+    <script src="https://kit.fontawesome.com/df052204df.js" crossorigin="anonymous"></script>
+    <!-- main js 적용, defer : 다운이 다 안되더라고 html이 표시되도록 -->
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- 메뉴바 구성 -->
+    <nav class="navbar">
+        <!-- 로고 영역 -->
+        <div class="navbar_logo">
+            <i class="fas fa-calendar-check"></i>
+            <a href="#">todowith</a>
+
+        </div>
+        <!-- 메뉴 영역 -->
+        <ul class="navbar_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Todo</a></li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Mypage</a></li>
+            <li><a href="#">Setting</a></li>
+        </ul>
+        <!-- 아이콘 영역 -->
+        <ul class="navbar_icons">
+            <li><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-facebook-square"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+        </ul>
+        <a href="#" class="navbar_toggleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+</body>
+</html>
